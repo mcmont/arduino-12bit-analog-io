@@ -17,7 +17,7 @@ The IC pins are designated by their names, rather than by their pin numbers. Thi
 | 12 MISO	    | DOUT [2]    | -      	|
 | 13 SCLK       | SCLK 	      | SCLK   	|
 
-[1] +5V from this digital pin is sufficient to power the DAC IC. The +5V supply should be decoupled with a 10uF tantalum bead capacitor in parallel with a 0.1uF ceramic capacitor to ground.
+[1] This digital pin provides sufficient current to power the DAC IC. The +5V supply trace should be decoupled by placing a 10uF tantalum bead capacitor in parallel with a 0.1uF ceramic capacitor to ground within 1cm of the AD5628 VDD power pin.
 
 [2] Via a 100 Ohm pull-up resistor to +5V.
 
