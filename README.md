@@ -12,12 +12,12 @@ The IC pins are designated by their names, rather than by their pin numbers. Thi
 |-------------	|-----------	|-------- |
 | 8  SS        	| CS   	      | -      	|
 | 9  SS        	| -    	      | SYNC   	|
-| 10 NC [1]  	    | -    	      | -      	|
+| 10 +5V out [1]  	    | -    	      | VDD    	|
 | 11 MOSI	    | DIN  	      | DIN    	|
 | 12 MISO	    | DOUT [2]    | -      	|
 | 13 SCLK       | SCLK 	      | SCLK   	|
 
-[1] This SPI slave select (SS) pin must be set to OUTPUT mode by the firmware, but because we need to control 2 ICs we don't use it, so it must not be electrically connected to anything. 
+[1] +5V from this digital pin is sufficient to power the DAC IC. The +5V supply should be decoupled with a 10uF tantalum bead capacitor in parallel with a 0.1uF ceramic capacitor to ground.
 
 [2] Via a 100 Ohm pull-up resistor to +5V.
 
@@ -44,10 +44,7 @@ You may wish to add an op-amp input stage to limit the voltages that can be appl
 | GND | GND (obvz)|
 | LDAC | GND |
 | CLR | GND |
-| VDD | +5V [6] |
 | REFIN| +5V |
-
-[6] +5V Supply should be decoupled with a 10uF tantalum bead capacitor in parallel with a 0.1uF ceramic capacitor to ground.
 
 ## Serial communications
 To communicate with the Arduino use a serial over USB serial connection at 115200 baud, 8 data bits, 1 stop bit, no parity, no flow control. When connecting to the board you can optionally set the DTR line to LOW for 50ms to force the Arduino to do a hardware reset.
