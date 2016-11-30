@@ -17,14 +17,14 @@ To read the voltages of the 8 analog inputs send an ASCII CR character over the 
 
 To change an analog output channel's voltage send a string with the channel number (1 based; 1-8), an ASCII space character, then the 12-bit value (0-4095) that corresponds to the desired voltage. For example, if the AD5628 voltage reference pin is set to 5V, sending the command:
 
-1 2047<CR>
+1 2047&lt;CR&gt;
 
 will change the output voltage of output channel 1 to 2.5V.
 
 You can change the voltage output of all of the channels simultaneously by 
 selecting channel zero, e.g:
 
-0 0<CR>
+0 0&lt;CR&gt;
 
 sets all output channels to 0V.
 
