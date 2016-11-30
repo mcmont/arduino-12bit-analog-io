@@ -6,7 +6,7 @@ Implements 8 x 12-bit analog inputs and 8 x 12-bit analog outputs using an Ardui
 
 This Arduino Uno firmware is used to control a 12-bit National Semiconductor (now Texas Instruments) ADC128S052 analog to digital converter (ADC) IC and an Analog Devices AD5628 digital to analog converter (DAC) IC.
 
-Datasheets: [http://www.ti.com/lit/ds/symlink/adc128s052-q1.pdf]("ADC128S052"), [http://www.analog.com/media/en/technical-documentation/data-sheets/AD5628_5648_5668.pdf]("AD5628")
+Datasheets: [ADC128S052](http://www.ti.com/lit/ds/symlink/adc128s052-q1.pdf, "View datasheet"), [AD5628](http://www.analog.com/media/en/technical-documentation/data-sheets/AD5628_5648_5668.pdf, "View datasheet")
 
 This firmware uses event-based execution driven by serial interrupts. When the user issues a command the relevant IC is selected, a command is sent and (in the case of the ADC) the response is read.
 
