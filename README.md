@@ -23,6 +23,7 @@ This firmware uses event-based execution driven by serial interrupts. When the u
 
 ## Other IC connections and ancilliary components
 ### ADC128S052
+| Pin name | Connect to |
 |-------------	|-----------	|
 | AGND  | Analog GND     |
 | DGND  | Digital GND [2]|
@@ -36,6 +37,7 @@ This firmware uses event-based execution driven by serial interrupts. When the u
 You may wish to add an op-amp input stage to limit the voltages that can be applied to the ADC128S052 input channel pins.
 
 ### AD5628
+| Pin name | Connect to |
 |-------------	|-----------	|
 | GND | GND (obvz)|
 | LDAC | GND |
