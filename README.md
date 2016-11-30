@@ -33,3 +33,8 @@ Strings are returned by the Arduino prefixed with MESG if the information is a m
 ## Credits
 Dr. Chris Empson, School of Chemistry, University of Leeds 2015.
 https://github.com/mcmont/arduino-12bit-analog-io
+
+
+## License
+All code is made available under the Creative Commons Attribution (CC-BY) license v4.0.
+[https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/ "View license")
