@@ -9,6 +9,7 @@ This Arduino Uno firmware is used to control a 12-bit National Semiconductor (no
 This firmware uses event-based execution driven by serial interrupts. When the user issues a command the relevant IC is selected, a command is sent and (in the case of the ADC) the response is read.
 
 ## IC pinout
+The IC pins are designated by their names, rather than by their pin numbers. This is because different packages are available and pin layouts vary between them. 
 
 | Arduino pin 	| ADC128S052 	| AD5628  |
 |-------------	|-----------	|-------- |
@@ -72,7 +73,6 @@ Strings are returned by the Arduino prefixed with MESG if the information is a m
 ## Credits
 Dr. Chris Empson, School of Chemistry, University of Leeds 2015.
 https://github.com/mcmont/arduino-12bit-analog-io
-
 
 ## License
 All code is made available under the Creative Commons Attribution (CC-BY) license v4.0.
