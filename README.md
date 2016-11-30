@@ -31,7 +31,9 @@ This firmware uses event-based execution driven by serial interrupts. When the u
 | VD    | +5V [4]        |
 
 [2] When creating a board design you should create analog and digital ground planes that should be electrically connected in one place only.
+
 [3] VA is the positive analog supply pin. This voltage is also used as the reference voltage. This pin must Power 2 VA be connected to a quiet 2.7-V to 5.25-V source and bypassed to GND with 1-µF and 0.1-µF monolithic ceramic capacitors located within 1 cm of the power pin.
+
 [4] VD should be connected to a quiet +2.7V to +5.25V source and bypassed to GND with 1μF and 100nF monolithic ceramic capacitors  located within 1 cm of the power pin.
 
 You may wish to add an op-amp input stage to limit the voltages that can be applied to the ADC128S052 input channel pins.
