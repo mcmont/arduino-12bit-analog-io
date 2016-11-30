@@ -3,7 +3,7 @@
 ## Overview
 This Arduino Uno firmware implements 8 12-bit analog input and output channels. The Arduino controls a 12-bit National Semiconductor (now Texas Instruments) [ADC128S052](http://www.ti.com/lit/ds/symlink/adc128s052-q1.pdf "View datasheet") analog to digital converter (ADC) IC and an Analog Devices [AD5628](http://www.analog.com/media/en/technical-documentation/data-sheets/AD5628_5648_5668.pdf "View datasheet") digital to analog converter (DAC) IC using the [SPI bus](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus).
 
-This firmware uses event-based execution driven by serial interrupts. When the user issues a command the relevant IC is selected, a command is sent and (in the case of the ADC) the response is read.
+This firmware uses event-based execution driven by serial interrupts. When the user issues a command the relevant IC is selected by setting its slave select (SS) pin LOW, a command is sent and (in the case of the ADC) the response is read.
 
 ## IC pinout
 The IC pins are designated by their names, rather than by their pin numbers. This is because different packages are available and pin layouts vary between them. 
@@ -17,7 +17,7 @@ The IC pins are designated by their names, rather than by their pin numbers. Thi
 | 12 MISO	    | DOUT [2]    | -      	|
 | 13 SCLK       | SCLK 	      | SCLK   	|
 
-[1] This SPI slave select (SS) pin must be set to OUTPUT mode by the firmware, but because we need to control 2 ICs we don't use it, si it must not be electrically connected to anything. 
+[1] This SPI slave select (SS) pin must be set to OUTPUT mode by the firmware, but because we need to control 2 ICs we don't use it, so it must not be electrically connected to anything. 
 
 [2] Via a 100 Ohm pull-up resistor to +5V.
 
