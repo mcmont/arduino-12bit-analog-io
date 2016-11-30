@@ -8,6 +8,19 @@ This Arduino Uno firmware is used to control a 12-bit National Semiconductor (no
 
 This firmware uses event-based execution driven by serial interrupts. When the user issues a command the relevant IC is selected, a command is sent and (in the case of the ADC) the response is read.
 
+## IC pinout
+
+| Arduino pin 	| ADC128S052 	| AD5628  |
+|-------------	|-----------	|-------- |
+| 8  SS        	| CS   	      | -      	|
+| 9  SS        	|      	      | SYNC   	|
+| 10 NC  	      | -    	      | -      	|
+| 11 MOSI	      | DIN  	      | DIN    	|
+| 12 MISO	      | DOUT[1]     | -      	|
+| 13 SCLK       | SCLK 	      | SCLK   	|
+
+[1] Via a pull-up resistor to 5V
+
 ## Serial communications
 To communicate with the Arduino use a serial over USB serial connection at 115200 baud, 8 data bits, 1 stop bit, no parity, no flow control. When connecting to the board you can optionally set the DTR line to LOW for 50ms to force the Arduino to do a hardware reset.
 
