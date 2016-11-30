@@ -1,4 +1,4 @@
-# arduino-12bit-analog-io
+# Arduino Uno 12-bit I/O
 
 ## Overview
 This Arduino Uno firmware implements 8 12-bit analog input and output channels. The Arduino controls a 12-bit National Semiconductor (now Texas Instruments) [ADC128S052](http://www.ti.com/lit/ds/symlink/adc128s052-q1.pdf "View datasheet") analog to digital converter (ADC) IC and an Analog Devices [AD5628](http://www.analog.com/media/en/technical-documentation/data-sheets/AD5628_5648_5668.pdf "View datasheet") digital to analog converter (DAC) IC using the [SPI bus](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus).
