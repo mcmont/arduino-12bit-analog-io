@@ -13,7 +13,7 @@ This firmware uses event-based execution driven by serial interrupts. When the u
 | Arduino pin 	| ADC128S052 	| AD5628  |
 |-------------	|-----------	|-------- |
 | 8  SS        	| CS   	      | -      	|
-| 9  SS        	|      	      | SYNC   	|
+| 9  SS        	| -    	      | SYNC   	|
 | 10 NC  	      | -    	      | -      	|
 | 11 MOSI	      | DIN  	      | DIN    	|
 | 12 MISO	      | DOUT[1]     | -      	|
