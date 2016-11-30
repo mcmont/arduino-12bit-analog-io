@@ -20,7 +20,7 @@ The IC pins are designated by their names, rather than by their pin numbers. Thi
 
 [1] This SPI slave select (SS) pin must be set to OUTPUT mode by the firmware, but because we need to control 2 ICs we don't use it, si it must not be electrically connected to anything. 
 
-[2] Via a pull-up resistor to 5V
+[2] Via a 100 Ohm pull-up resistor to +5V.
 
 ## Other IC connections and ancilliary components
 ### ADC128S052
