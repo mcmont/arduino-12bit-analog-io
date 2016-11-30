@@ -14,12 +14,36 @@ This firmware uses event-based execution driven by serial interrupts. When the u
 |-------------	|-----------	|-------- |
 | 8  SS        	| CS   	      | -      	|
 | 9  SS        	| -    	      | SYNC   	|
-| 10 NC  	      | -    	      | -      	|
-| 11 MOSI	      | DIN  	      | DIN    	|
-| 12 MISO	      | DOUT[1]     | -      	|
+| 10 NC  	    | -    	      | -      	|
+| 11 MOSI	    | DIN  	      | DIN    	|
+| 12 MISO	    | DOUT [1]    | -      	|
 | 13 SCLK       | SCLK 	      | SCLK   	|
 
 [1] Via a pull-up resistor to 5V
+
+## Other IC connections and ancilliary components
+### ADC128S052
+
+| AGND  | Analog GND     |
+| DGND  | Digital GND [2]|
+| VA    | +5V [3]        |
+| VD    | +5V [4]        |
+
+[2] When creating a board design you should create analog and digital ground planes that should be electrically connected in one place only.
+[3] VA is the positive analog supply pin. This voltage is also used as the reference voltage. This pin must Power 2 VA be connected to a quiet 2.7-V to 5.25-V source and bypassed to GND with 1-µF and 0.1-µF monolithic ceramic capacitors located within 1 cm of the power pin.
+[4] VD should be connected to a quiet +2.7V to +5.25V source and bypassed to GND with 1μF and 100nF monolithic ceramic capacitors  located within 1 cm of the power pin.
+
+You may wish to add an op-amp input stage to limit the voltages that can be applied to the ADC128S052 input channel pins.
+
+### AD5628
+
+| GND | GND (obvz)|
+| LDAC | GND |
+| CLR | GND |
+| VDD | +5V [5] |
+| REFIN| +5V |
+
+[5] +5V Supply should be decoupled with a 10uF tantalum bead capacitor in parallel with a 0.1uF ceramic capacitor to ground.
 
 ## Serial communications
 To communicate with the Arduino use a serial over USB serial connection at 115200 baud, 8 data bits, 1 stop bit, no parity, no flow control. When connecting to the board you can optionally set the DTR line to LOW for 50ms to force the Arduino to do a hardware reset.
